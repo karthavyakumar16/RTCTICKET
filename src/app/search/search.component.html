@@ -1,0 +1,31 @@
+
+<div>
+    <h2>Travel Form</h2>
+    <form>
+        <!-- Start Location -->
+        <label for="source">Source:</label>
+        <input type="text" id="source" name="source" 
+        placeholder="Enter starting location" [(ngModel)]="search.source">
+        
+
+        <!-- End Location -->
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" 
+        placeholder="Enter destination" [(ngModel)]="search.destination">
+    
+
+        <!-- Start Date (Calendar) -->
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date"[(ngModel)]="search.startdate">
+    
+
+        <!-- End Date (Calendar) -->
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end-date"[(ngModel)]="search.enddate">
+        
+
+        <!-- Submit Button -->
+        <button type="submit" (click)="searchBus()">Search bus</button>
+    </form>
+
+</div>

@@ -1,0 +1,37 @@
+<div class="search-container">
+    <h2>Search Bus Details</h2>
+    <form (ngSubmit)="onSearch()">
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        name="searchTerm"
+        placeholder="Enter Bus Number or Route" 
+        required 
+      />
+      <button type="submit">Search</button>
+    </form>
+  
+    <div *ngIf="filteredBuses.length > 0" class="bus-results">
+      <h3>Bus Details</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Bus Number</th>
+            <th>Route</th>
+            <th>Timing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bus of filteredBuses">
+            <td>{{ bus.number }}</td>
+            <td>{{ bus.route }}</td>
+            <td>{{ bus.timing }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="filteredBuses.length === 0 && searchPerformed">
+      <p>No bus found matching the search criteria.</p>
+    </div>
+  </div>
