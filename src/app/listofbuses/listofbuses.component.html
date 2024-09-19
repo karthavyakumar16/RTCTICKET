@@ -11,6 +11,7 @@
       <button type="submit">Search</button>
     </form>
   
+
     <div *ngIf="filteredBuses.length > 0" class="bus-results">
       <h3>Bus Details</h3>
       <table>
@@ -30,7 +31,8 @@
         </tbody>
       </table>
     </div>
-  
+
+
     <div *ngIf="filteredBuses.length === 0 && searchPerformed">
       <p>No bus found matching the search criteria.</p>
     </div>

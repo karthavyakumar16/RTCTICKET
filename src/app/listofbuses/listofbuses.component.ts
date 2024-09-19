@@ -15,17 +15,17 @@ export class ListofbusesComponent {
   }
     // Sample data for bus details
     busData = [
-      { number: '101', route: 'hyderabad - vijawada', timing: '9:00 AM - 6:00 PM' },
-      { number: '102', route: 'City Center - Airport', timing: '10:00 AM - 8:00 PM' },
-      { number: '103', route: 'Suburbs - University', timing: '7:00 AM - 5:00 PM' },
-      { number: '104', route: 'Suburbs - Airport', timing: '6:00 AM - 4:00 PM' }
+      { number: '101', route: 'hyderabad - vijawada', timing: '9:00 AM - 01:00 PM' },
+      { number: '102', route: 'hyderabad - vijawada', timing: '10:00 AM - 02:00 PM' },
+      { number: '103', route: 'hyderabad - vijawada', timing: '11:00 AM - 03:00 PM' },
+      { number: '104', route: 'hyderabad - vijawada', timing: '01:00 pm - 06:00 PM' }
     ];
   
     filteredBuses: any[] = [];
   
     onSearch() {
       this.searchPerformed = true;
-      this.router.navigate(['/seatselection'])
+      this.router.navigate(['/listofbuses'])
       const searchLower = this.searchTerm.toLowerCase();
       
       this.filteredBuses = this.busData.filter(bus =>
